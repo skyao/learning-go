@@ -1,11 +1,8 @@
-# Go学习笔记
+# Go 语言学习笔记
 
-## 介绍
+Go 语言学习笔记, 记录 Go 语言的学习过程.
 
-Go学习笔记, 记录 Go 语言的学习过程.
+笔记发布于 gitbook，请点击下面的链接阅读:
 
-## 导航
+https://skyao.gitbooks.io/leaning-go/
 
-如果看到的是 github 的源代码, 请点击下面的链接:
-
-[Go学习笔记@gitbook](https://www.gitbook.com/book/skyao/leaning-go/)

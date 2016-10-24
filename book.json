@@ -1,27 +1,32 @@
 {
+  "gitbook": ">=3.2.0",
+  "description": "Go语言学习笔记",
+  "language": "zh-hans",
   "author": "Sky Ao <aoxiaojian@gmail.cn>",
-  "description": "Go学习笔记, 记录Go语言的学习过程和日常使用",
   "extension": null,
   "generator": "site",
-  "sidebar": {
-    "Sky@gitbook": "https://skyao.gitbooks.io"
+  "links" : {
+    "sidebar" : {
+        "Sky@Gitbook": "https://skyao.gitbooks.io"
+    }
   },
-  "output": null,
-  "pdf": {
-    "fontSize": 12,
-    "footerTemplate": null,
-    "headerTemplate": null,
-    "margin": {
-      "bottom": 36,
-      "left": 62,
-      "right": 62,
-      "top": 36
+  "structure" : {
+        "readme" : "README_gitbook.md"
     },
-    "pageNumbers": false,
-    "paperSize": "a4"
+  "plugins": [
+    "toggle-chapters",
+    "edit-link", 
+    "etoc",
+    "back-to-top-button",
+    "tags"
+  ],
+  "pluginsConfig": {
+    "edit-link": {
+        "base": "https://github.com/skyao/leaning-go/edit/master",
+        "label": "Edit"
+    }
   },
-  "plugins": [],
-  "title": "Go学习笔记",
+  "title": "Go语言学习笔记",
   "variables": {
   }
 }
