@@ -14,46 +14,32 @@ sudo apt-get install golang-1.6
 
 ### 手工安装
 
-如果需要安装特定版本，比如最新的 Go 1.7, 就需要手工安装。
+如果需要安装特定版本，比如最新的 Go 1.8, 就需要手工安装。
 
-先在 go 的官方下载需要的版本，下载地址为：
+先在 go 的 [官方网站](https://golang.org/dl/) 下载需要的版本， 以 Go 1.8.3 为例， 选择 `go1.8.3.linux-amd64.tar.gz` 。
 
-https://golang.org/dl/
-
-以 Go 1.7 为例， 选择 `go1.7.linux-amd64.tar.gz` 。
-
-然后遵循安装指南的要求，简单解压缩到 `/usr/local` 即可：
-
-https://golang.org/doc/install
+然后参照 [安装指南](https://golang.org/doc/install)，简单解压缩到 `/usr/local` 即可：
 
 ```bash
-sudo tar -C /usr/local -xzf go1.7.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.8.3.linux-amd64.tar.gz
 ```
 
 完成之后go就安装在 `/usr/local/go` 下，这也是 Go 默认的安装路径。
 
 ### 配置
 
-安装完成之后，需要做两个事情：
-
-1. 将go加入到path中
-2. 设置 GOPATH
+安装完成之后，需要将go加入到path中：
 
 ```bash
 # golang
-export GOPATH=$HOME/work/soft/go
-export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
+export PATH=/usr/local/go/bin:$PATH
 ```
-
-上面的例子中，将 GOPATH 路径设置为 `$HOME/work/soft/go`，然后将 `/usr/local/go/bin` 和 GOPATH下的bin 加入到 PATH 路径。
-
-> 提醒： 不要用软连接的方式将go连接到 `/usr/bin/go` ，因为后面 golang 在安装一些模块时，会将可执行文件放在 `/usr/lib/go-1.6/bin` 目录下，所以最好将 `/usr/lib/go-1.6/bin` 目录加入 PATH 。
 
 执行 `source /etc/profile` 后执行 `go version` ，查看当前版本：
 
 ```bash
 $ source /etc/profile
 $ go version
-go version go1.7 linux/amd64
+go version go1.8.3 linux/amd64
 ```
 
