@@ -2,7 +2,7 @@
   "gitbook": ">=3.2.0",
   "description": "Go语言学习笔记",
   "language": "zh-hans",
-  "author": "Sky Ao <aoxiaojian@gmail.cn>",
+  "author": "Sky Ao <aoxiaojian@gmail.com>",
   "extension": null,
   "generator": "site",
   "links" : {
@@ -15,10 +15,8 @@
     },
   "plugins": [
     "toggle-chapters",
-    "edit-link", 
     "etoc",
-    "back-to-top-button",
-    "tags"
+    "back-to-top-button"
   ],
   "pluginsConfig": {
     "edit-link": {
