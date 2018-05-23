@@ -7,6 +7,8 @@
     * [基础语法](grammar/basic/index.md)
         * [包](grammar/basic/package.md)
         * [文档](grammar/basic/doc.md)
+        * [函数](grammar/basic/function.md)
+        * [变量](grammar/basic/variable.md)
 * [工具](tool/index.md)
   * [go命令](tool/go.md)
 
