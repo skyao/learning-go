@@ -27,6 +27,14 @@ go build
 go build github.com/goinaction/code/chapter3/wordcount
 ```
 
+可以在编译时使用竞争检测器标志来编译程序：
+
+```bash
+go build -race
+```
+
+
+
 ## go run
 
 `go run` 命令先编译，然后执行编译创建的可执行程序。
