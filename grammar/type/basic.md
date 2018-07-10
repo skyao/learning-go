@@ -1,4 +1,18 @@
-# 类型转换
+# 基本类型
+
+Go 的基本类型有：
+
+- bool
+- string
+- int  int8  int16  int32  int64
+- uint uint8 uint16 uint32 uint64 uintptr
+- byte // uint8 的别名
+- rune // int32 的别名，代表一个Unicode码
+- float32 float64
+- complex64 complex128
+
+
+## 类型转换
 
 表达式 `T(v)` 将值 `v` 转换为类型 `T`。
 
@@ -28,3 +42,4 @@ i := 42           // int
 f := 3.142        // float64
 g := 0.867 + 0.5i // complex128
 ```
+
