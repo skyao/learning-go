@@ -17,6 +17,12 @@
 - [官方文档(中文版)](https://go-zh.org/doc/)
 - [Go Wiki](https://golang.org/wiki)
 
+## 参考资料
+
+- [Go编程语言规范（英文版）](https://golang.org/ref/spec)
+- [Go编程语言规范（中文翻译版）](https://github.com/OlingCat/Go-zh/blob/master/doc/go_spec.html)
+- [Go编程语言规范（本地浏览）](go_spec.html)
+
 ## 书籍
 
 参考知乎帖 [系统学习GO，推荐几本靠谱的书?](https://www.zhihu.com/question/30461290)
