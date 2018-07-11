@@ -23,6 +23,11 @@
         * [基本类型](grammar/type/basic.md)
         * [数组](grammar/type/array.md)
         * [结构体](grammar/type/struct.md)
+        * [map](grammar/type/map.md)
+        * [函数](grammar/type/function.md)
+        * [方法](grammar/type/method.md)
+        * [接口](grammar/type/interface.md)
+        * [错误](grammar/type/error.md)
 * [工具](tool/index.md)
   * [go命令](tool/go.md)
 
