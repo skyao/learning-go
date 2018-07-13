@@ -30,6 +30,8 @@
         * [错误](grammar/type/error.md)
 * [工具](tool/index.md)
   * [go命令](tool/go.md)
+  * [dep](tool/dep/index.md)
+    * [安装dep](tool/dep/install.md)
 
 
 
