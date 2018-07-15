@@ -32,6 +32,7 @@
   * [go命令](tool/go.md)
   * [dep](tool/dep/index.md)
     * [安装dep](tool/dep/install.md)
+    * [查看依赖状态](tool/dep/status.md)
 
 
 
