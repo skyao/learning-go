@@ -19,6 +19,7 @@
         * [range遍历](grammar/flow/range.md)
         * [defer语句](grammar/flow/defer.md)
         * [Panic和Recover](grammar/flow/panic.md)
+        * [select语句](grammar/flow/select.md)
     * [类型和数据结构](grammar/type/index.md)
         * [基本类型](grammar/type/basic.md)
         * [数组](grammar/type/array.md)
