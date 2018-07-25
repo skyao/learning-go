@@ -34,6 +34,11 @@
   * [dep](tool/dep/index.md)
     * [安装dep](tool/dep/install.md)
     * [查看依赖状态](tool/dep/status.md)
-
+* [标准库](stdlib/index.md)
+  * [unsafe](stdlib/unsafe/index.md)
+  * [sync](stdlib/sync/index.md)
+    * [atomic](stdlib/sync/atomic.md)
+    * [mutex](stdlib/sync/mutex.md)
+    * [Once](stdlib/sync/once.md)
 
 

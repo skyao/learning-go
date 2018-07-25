@@ -58,3 +58,16 @@ a = &v // *Vertex 实现了 Abser
    	return fmt.Sprintf("%v (%v years)", p.Name, p.Age)
    }
    ```
+
+## 任意接口类型
+
+在go中，如果要表示类型为任意类型，包括基础类型，可以这样做：
+
+```go
+type Value struct {
+	v interface{}
+}
+```
+
+有点类似java中的Object，但是go没有对象继承，也没有Object这种单根继承的root对象，为了表示所有类型，就需要使用interface关键字，而interface在go中是关键字，不是类型，因此要加`{}` 后缀。这个语法相对java有点特别。
+
