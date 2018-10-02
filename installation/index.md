@@ -1,20 +1,8 @@
 # Go安装
 
+可以在 go 的 [官方网站](https://golang.org/dl/) 下载需要的版本，然后参照 [安装指南](https://golang.org/doc/install) 的说明进行。
+
 ## Linux
-
-### Ubuntu Apt-get 安装
-
-在 ubuntu 之上可以用 apt-get 命令简单安装 `golang-1.6`：
-
-```bash
-sudo apt-get install golang-1.6
-```
-
-> 注： 如果用 apt-get install 命令安装完 golang 之后，再用 apt-get remove 删除，然后再用 apt-get install 命令安装（不要问为什么 ^0^），会发现安装和删除都不干净。此时可以使用 `sudo aptitude remove golang-1.6` 命令完整卸载，再 `sudo aptitude install golang-1.6` 全新安装。
-
-### 手工安装
-
-如果需要安装特定版本，比如最新的 Go 1.8, 就需要手工安装。
 
 先在 go 的 [官方网站](https://golang.org/dl/) 下载需要的版本， 以 Go 1.8.3 为例， 选择 `go1.8.3.linux-amd64.tar.gz` 。
 
@@ -79,4 +67,21 @@ GOPATH="/home/sky/work/soft/go"
 ```
 
 之后再通过 `go get ****` 命令安装程序时，新的程序就会被安装到 `GOPATH/bin` 下，然后由于`GOPATH/bin` 已经加入到 PATH，因此就可以很方便的使用新安装的程序。
+
+## Windows安装
+
+下载需要的版本，如 `go1.11.windows-amd64.msi `，点击安装。
+
+- 安装过程中选择安装路径为`C:\work\soft\golang`。
+- 设置环境变量`GOPATH=C:\work\soft\gopath`
+- 设置环境变量`GOROOT=C:\work\soft\golang`
+- 修改环境变量PATH，增加内容 `%GOPATH%\bin`
+
+实际安装时发现GOPATH设置无效，`go env`命令看到：
+
+```bash
+set GOPATH=C:\Users\aoxia\go
+```
+
+
 
