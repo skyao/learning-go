@@ -1,6 +1,14 @@
-# 函数
+---
+date: 2018-12-04T23:50:00+08:00
+title: 函数
+weight: 413
+menu:
+  main:
+    parent: "grammar-basic"
+description : "go语言中的函数"
+---
 
-## 语法
+### 语法
 
 Golang的函数语法和Java、C等有非常大的不同：
 
@@ -14,7 +22,7 @@ func swap(x, y string) (string, string) {
 }
 ```
 
-## 参数
+### 参数
 
 函数可以没有参数或有多个参数。
 
@@ -34,7 +42,7 @@ func add(x, y int) int {
 }
 ```
 
-## 返回值
+### 返回值
 
 函数可以返回任意数量的返回值。这点和很多语言不同：
 

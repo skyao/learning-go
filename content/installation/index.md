@@ -1,8 +1,13 @@
-# Go安装
+---
+date: 2018-12-04T23:00:00+08:00
+title: Golang安装
+weight: 200
+description : "介绍Go语言的安装"
+---
 
-可以在 go 的 [官方网站](https://golang.org/dl/) 下载需要的版本，然后参照 [安装指南](https://golang.org/doc/install) 的说明进行。
+可以在 Golang 的 [官方网站](https://golang.org/dl/) 下载需要的版本，然后参照 [安装指南](https://golang.org/doc/install) 的说明进行。
 
-## Linux
+## Linux安装
 
 先在 go 的 [官方网站](https://golang.org/dl/) 下载需要的版本， 以 Go 1.8.3 为例， 选择 `go1.8.3.linux-amd64.tar.gz` 。
 
