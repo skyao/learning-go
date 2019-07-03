@@ -88,5 +88,9 @@ GOPATH="/home/sky/work/soft/go"
 set GOPATH=C:\Users\aoxia\go
 ```
 
+### Mac安装
 
+先在 go 的 [官方网站](https://golang.org/dl/) 下载需要的版本，如 go1.12.6.darwin-amd64.pkg，然后双击安装。
+
+或者，用 brew 是最简单的：`brew upgrade golang` 安装， `brew upgrade golang` 升级版本。
 
