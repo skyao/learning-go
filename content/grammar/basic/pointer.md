@@ -1,4 +1,12 @@
-# 指针
+---
+date: 2018-12-04T23:50:00+08:00
+title: 指针
+weight: 415
+menu:
+  main:
+    parent: "grammar-basic"
+description : "go语言中的指针"
+---
 
 Go 具有指针。 指针保存了变量的内存地址。
 
