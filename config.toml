@@ -65,10 +65,24 @@ googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
 	weight = 100
 
 [[menu.main]]
-	name   = "安装"
-	identifier = "installation"
-	url    = "/installation/"
+	name   = "开发环境"
+	identifier = "develop"
+	url    = "/develop/"
 	weight = 300
+
+[[menu.main]]
+	name   = "安装"
+	identifier = "develop-install"
+	parent = "develop"
+	url    = "/develop/install/"
+	weight = 310
+
+[[menu.main]]
+	name   = "IDE"
+	identifier = "develop-ide"
+	parent = "develop"
+	url    = "/develop/ide/"
+	weight = 330
 
 [[menu.main]]
 	name   = "语法"
@@ -77,51 +91,262 @@ googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
 	weight = 400
 
 [[menu.main]]
+	name   = "语法元素"
+	identifier = "grammar-element"
+	parent = "grammar"
+	url    = "/grammar/element/"
+	weight = 410
+
+[[menu.main]]
 	name   = "基础语法"
 	identifier = "grammar-basic"
 	parent = "grammar"
 	url    = "/grammar/basic/"
-	weight = 410
+	weight = 430
 
 [[menu.main]]
-	name   = "控制流程"
-	identifier = "grammar-flow"
+	name   = "声明"
+	identifier = "grammar-declaration"
 	parent = "grammar"
-	url    = "/grammar/flow/"
-	weight = 430
+	url    = "/grammar/declaration/"
+	weight = 450
+
+[[menu.main]]
+	name   = "作用域"
+	identifier = "grammar-scope"
+	parent = "grammar"
+	url    = "/grammar/scope/"
+	weight = 460
 
 [[menu.main]]
 	name   = "类型"
 	identifier = "grammar-type"
 	parent = "grammar"
 	url    = "/grammar/type/"
-	weight = 450
+	weight = 470
+
+[[menu.main]]
+	name   = "表达式"
+	identifier = "grammar-expression"
+	parent = "grammar"
+	url    = "/grammar/expression/"
+	weight = 500
+
+[[menu.main]]
+	name   = "语句"
+	identifier = "grammar-statement"
+	parent = "grammar"
+	url    = "/grammar/statement/"
+	weight = 550
+
+[[menu.main]]
+	name   = "控制流程"
+	identifier = "grammar-flow"
+	parent = "grammar"
+	url    = "/grammar/flow/"
+	weight = 600
+
+[[menu.main]]
+	name   = "语言特性"
+	identifier = "feature"
+	url    = "/feature/"
+	weight = 800
+
+[[menu.main]]
+	name   = "函数"
+	identifier = "feature-function"
+	parent = "feature"
+	url    = "/feature/function/"
+	weight = 810
+
+[[menu.main]]
+	name   = "内建函数"
+	identifier = "build-in-function"
+	parent = "feature"
+	url    = "/feature/build-in-function/"
+	weight = 830
+
+[[menu.main]]
+	name   = "接口"
+	identifier = "feature-interface"
+	parent = "feature"
+	url    = "/feature/interface/"
+	weight = 860
+
+[[menu.main]]
+	name   = "错误处理"
+	identifier = "feature-error"
+	parent = "feature"
+	url    = "/feature/error/"
+	weight = 900
+
+[[menu.main]]
+	name   = "Panic"
+	identifier = "feature-panic"
+	parent = "feature"
+	url    = "/feature/panic/"
+	weight = 920
+
+[[menu.main]]
+	name   = "高级特性"
+	identifier = "advance"
+	url    = "/advance/"
+	weight = 1000
+
+[[menu.main]]
+	name   = "反射"
+	identifier = "advance-reflect"
+	parent = "advance"
+	url    = "/advance/reflect/"
+	weight = 1010
+
+[[menu.main]]
+	name   = "Unsafe"
+	identifier = "advance-unsafe"
+	parent = "advance"
+	url    = "/advance/unsafe/"
+	weight = 1030
+
+[[menu.main]]
+	name   = "范型"
+	identifier = "advance-generic"
+	parent = "advance"
+	url    = "/advance/generic/"
+	weight = 1050
+
+[[menu.main]]
+	name   = "并发"
+	identifier = "concurrency"
+	url    = "/concurrency/"
+	weight = 1200
+
+[[menu.main]]
+	name   = "并发原则"
+	identifier = "concurrency-principle"
+	parent = "concurrency"
+	url    = "/concurrency/principle/"
+	weight = 1210
+
+[[menu.main]]
+	name   = "Goroutine"
+	identifier = "concurrency-goroutine"
+	parent = "concurrency"
+	url    = "/concurrency/goroutine/"
+	weight = 1230
+
+[[menu.main]]
+	name   = "Channel"
+	identifier = "concurrency-channel"
+	parent = "concurrency"
+	url    = "/concurrency/channel/"
+	weight = 1250
 
 [[menu.main]]
 	name   = "标准库"
 	identifier = "stdlib"
 	url    = "/stdlib/"
-	weight = 600
+	weight = 1400
 
 [[menu.main]]
 	name   = "sync"
 	identifier = "stdlib-sync"
 	parent = "stdlib"
 	url    = "/stdlib/sync/"
-	weight = 610
+	weight = 1410
 
 [[menu.main]]
-	name   = "unsafe"
-	identifier = "stdlib-unsafe"
-	parent = "stdlib"
-	url    = "/stdlib/unsafe/"
-	weight = 780
+	name   = "代码组织"
+	identifier = "organization"
+	url    = "/organization/"
+	weight = 1700
+
+[[menu.main]]
+	name   = "包"
+	identifier = "organization-package"
+	parent = "organization"
+	url    = "/organization/package/"
+	weight = 1710
+
+[[menu.main]]
+	name   = "格式化"
+	identifier = "organization-formatting"
+	parent = "organization"
+	url    = "/organization/formatting/"
+	weight = 1720
+
+[[menu.main]]
+	name   = "Vendor"
+	identifier = "organization-vendor"
+	parent = "organization"
+	url    = "/organization/vendor/"
+	weight = 1730
+
+[[menu.main]]
+	name   = "Dep"
+	identifier = "organization-dep"
+	parent = "organization"
+	url    = "/organization/dep/"
+	weight = 1740
+
+[[menu.main]]
+	name   = "模块"
+	identifier = "organization-module"
+	parent = "organization"
+	url    = "/organization/module/"
+	weight = 1750
+
+[[menu.main]]
+	name   = "生命周期"
+	identifier = "lifecycle"
+	url    = "/lifecycle/"
+	weight = 1800
+
+[[menu.main]]
+	name   = "初始化"
+	identifier = "lifecycle-initial"
+	parent = "lifecycle"
+	url    = "/lifecycle/initial/"
+	weight = 1810
+
+[[menu.main]]
+	name   = "执行"
+	identifier = "lifecycle-execution"
+	parent = "lifecycle"
+	url    = "/lifecycle/execution/"
+	weight = 1820
+
+[[menu.main]]
+	name   = "测试"
+	identifier = "test"
+	url    = "/test/"
+	weight = 2000
+
+[[menu.main]]
+	name   = "单元测试"
+	identifier = "test-unit"
+	parent = "test"
+	url    = "/test/unit/"
+	weight = 2010
 
 [[menu.main]]
 	name   = "工具"
 	identifier = "tool"
 	url    = "/tool/"
-	weight = 2000
+	weight = 2200
+
+[[menu.main]]
+	name   = "gdb"
+	identifier = "tool-gdb"
+	parent = "tool"
+	url    = "/tool/gdb"
+	weight = 2220
+
+[[menu.main]]
+	name   = "go-callvis"
+	identifier = "tool-go-callvis"
+	parent = "tool"
+	url    = "/tool/go-callvis"
+	weight = 2240
 
 [blackfriday]
 	smartypants	= true

@@ -1,8 +1,9 @@
-# 控制流程
-
-golang的控制流程包括 if, for, switch语句, 可以配合使用goto, continue, break跳转语句，还有用于游历array, slides和map的range关键字。
-
-另外还有特殊的defer语句。
+---
+date: 2020-07-04T23:50:00+08:00
+title: 流程控制
+weight: 600
+description : "介绍Go语言的流程控制"
+---
 
 
 

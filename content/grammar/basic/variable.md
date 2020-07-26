@@ -1,7 +1,7 @@
 ---
 date: 2018-12-04T23:50:00+08:00
 title: 变量
-weight: 414
+weight: 431
 menu:
   main:
     parent: "grammar-basic"
@@ -77,7 +77,7 @@ for i, j, s := 0, 5, "a"; i < 3 && j < 100 && s != "aaaaa"; i, j, s = i+1, j+1, 
 }
 ```
 
-## go语言规范中的变量
+## go语言规范
 
 https://golang.org/ref/spec#Variables
 
@@ -97,3 +97,19 @@ x = v              // x 的值为 (*T)(nil)，动态类型为 *T
 ```
 
 变量的值通过在表达式中引用变量来检索；它是分配给变量的最新值。如果一个变量还没有被赋值，它的值就是它的类型的零值。
+
+## Effective Go
+
+https://golang.org/doc/effective_go.html#variables
+
+变量可以像常量一样被初始化，但初始化器可以是一个在运行时计算的通用表达式。
+
+```go
+var (
+    home   = os.Getenv("HOME")
+    user   = os.Getenv("USER")
+    gopath = os.Getenv("GOPATH")
+)
+```
+
+

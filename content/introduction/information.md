@@ -47,7 +47,7 @@ description : "收集Go语言的各种资料"
 
 | 书籍                 | 地址                                                         | 备注                                                        |
 | -------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
-| Go语言实战(中文版)   | [pdf下载](https://github.com/threerocks/studyFiles/blob/master/go/%E3%80%8AGo%E8%AF%AD%E8%A8%80%E5%AE%9E%E6%88%98%E3%80%8B.pdf) |                                                             |
+| Go语言实战(中文版)   | [pdf下载](https://github.com/songhuiqing/book/blob/master/Go语言实战 .pdf) |                                                             |
 | Go语言实战的读书笔记 | [在线浏览](http://www.flysnow.org/2017/01/05/install-golang.html) |                                                             |
 | Go语言圣经           | [在线浏览](https://yar999.gitbook.io/gopl-zh/)               | [《The Go Programming Language》](http://gopl.io/) 中文版本 |
 | Go语言标准库         | [在线浏览](https://books.studygolang.com/The-Golang-Standard-Library-by-Example/) | 可以配合Golang Packages官方文档一起学习                     |

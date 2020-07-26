@@ -1,7 +1,7 @@
 ---
 date: 2018-12-04T23:00:00+08:00
 title: Golang安装
-weight: 200
+weight: 310
 description : "介绍Go语言的安装"
 ---
 

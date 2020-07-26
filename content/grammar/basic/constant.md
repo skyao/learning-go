@@ -1,7 +1,7 @@
 ---
 date: 2018-12-04T23:50:00+08:00
 title: 常量
-weight: 413
+weight: 433
 menu:
   main:
     parent: "grammar-basic"
@@ -42,7 +42,7 @@ const (
 
 一个未指定类型的常量由上下文来决定其类型。
 
-## go语言规范中的常量
+## go语言规范
 
 https://golang.org/ref/spec#Constants
 
@@ -72,9 +72,56 @@ https://moego.me/golang_spec.html#id271
 
 这些要求也适用于字面值常量，以及 常量表达式 的求值结果。
 
+### Effective Go
 
+https://golang.org/doc/effective_go.html#constants
 
+Go中的常量仅仅是常量。它们是在编译时创建的，即使是在函数中定义为locals，也只能是数字、字符（符文）、字符串或布尔值。由于编译时的限制，定义它们的表达式必须是常量表达式，可被编译器评估。例如，1<<3是一个常量表达式，而math.Sin(math.Pi/4)不是，因为对math.Sin的函数调用需要在运行时发生。
 
+在Go中，使用iota枚举器创建枚举常量。由于 iota 可以成为表达式的一部分，而且表达式可以隐式重复，因此很容易建立复杂的值集。
 
+```go
+type ByteSize float64
 
+const (
+    _           = iota // ignore first value by assigning to blank identifier
+    KB ByteSize = 1 << (10 * iota)
+    MB
+    GB
+    TB
+    PB
+    EB
+    ZB
+    YB
+)
+```
 
+将String这样的方法附加到任何用户定义的类型上的能力，使得任意值在打印时自动格式化成为可能。虽然你最常看到的是它应用于结构体，但这种技术对于标量类型也很有用，比如浮点类型（如ByteSize）。
+
+```go
+func (b ByteSize) String() string {
+    switch {
+    case b >= YB:
+        return fmt.Sprintf("%.2fYB", b/YB)
+    case b >= ZB:
+        return fmt.Sprintf("%.2fZB", b/ZB)
+    case b >= EB:
+        return fmt.Sprintf("%.2fEB", b/EB)
+    case b >= PB:
+        return fmt.Sprintf("%.2fPB", b/PB)
+    case b >= TB:
+        return fmt.Sprintf("%.2fTB", b/TB)
+    case b >= GB:
+        return fmt.Sprintf("%.2fGB", b/GB)
+    case b >= MB:
+        return fmt.Sprintf("%.2fMB", b/MB)
+    case b >= KB:
+        return fmt.Sprintf("%.2fKB", b/KB)
+    }
+    return fmt.Sprintf("%.2fB", b)
+}
+```
+
+表达式YB打印为1.00YB，而ByteSize(1e13)打印为9.09TB。
+
+这里使用Sprintf实现ByteSize的String方法是安全的（避免无限期重复），不是因为转换，而是因为它用%f调用Sprintf，而%f不是字符串格式。Sprintf只有在需要字符串时才会调用String方法，而%f需要的是浮点值。
