@@ -1,16 +1,31 @@
 ---
 date: 2020-07-04T23:50:00+08:00
 title: 标识符
-weight: 413
+weight: 416
 menu:
   main:
     parent: "grammar-element"
 description : "go语言中的标识符"
 ---
 
-> 备注：摘录自 golang语言规范 https://golang.org/ref/spec#Blank_identifier
+### Identifiers/标识符
+
+https://golang.org/ref/spec#Identifiers
+
+identifiers/标识符用于命名程序实体，如变量和类型。标识符是由一个或多个字母和数字组成的序列。标识符的第一个字符必须是字母（不能是数字开头）。
+
+`identifier = letter { letter | unicode_digit } .`
+
+```go
+a
+_x9
+ThisVariableIsExported
+αβ
+```
 
 ### 空白标识符
+
+https://golang.org/ref/spec#Blank_identifier
 
 空白标识符由下划线字符 `_` 表示。它作为匿名的占位符，而不是常规的（非空白）标识符，在声明、操作数和赋值中具有特殊意义。
 

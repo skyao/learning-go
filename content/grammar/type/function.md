@@ -1,37 +1,40 @@
-## 函数
+---
+date: 2020-07-04T23:50:00+08:00
+title: 函数类型
+weight: 478
+menu:
+  main:
+    parent: "grammar-type"
+description : "go语言类型中的函数类型"
+---
 
-在golang中，函数也是一种值，也可以赋值。
+## Function types
 
-```go
-hypot := func(x, y float64) float64 {
-    return math.Sqrt(x*x + y*y)
-}
+https://golang.org/ref/spec#Function_types
 
-fmt.Println(hypot(3, 4))
+函数类型表示具有相同参数和结果类型的所有函数的集合。未初始化的函数类型变量的值为零。
+
+```
+FunctionType   = "func" Signature .
+Signature      = Parameters [ Result ] .
+Result         = Parameters | Type .
+Parameters     = "(" [ ParameterList [ "," ] ] ")" .
+ParameterList  = ParameterDecl { "," ParameterDecl } .
+ParameterDecl  = [ IdentifierList ] [ "..." ] Type .
 ```
 
-## 函数的闭包
+在参数或结果的列表中，名称（IdentifierList）必须全部存在或全部不存在。如果存在，每个名称代表指定类型的一个项目（参数或结果），并且签名中所有非空白名称必须是唯一的。如果不存在，每个类型代表该类型的一个项目。参数和结果列表总是用括号表示，但如果正好有一个未命名的结果，则可以写成一个未括号的类型。
 
-Go 函数可以是闭包的。闭包是一个函数值，它来自函数体的外部的变量引用。 函数可以对这个引用值进行访问和赋值；换句话说这个函数被“绑定”在这个变量上。
+在函数签名中，最后一个输入的参数可以有一个以...为前缀的类型。带有这样参数的函数被称为 *variadic* 可变参数，可以用零或多个参数来调用该参数。
 
 ```go
-func adder() func(int) int {
-	sum := 0 // 每个闭包都被绑定到其各自的 sum 变量上，这个 sum 变量是每个闭包独立的
-	return func(x int) int {
-		sum += x
-		return sum
-	}
-}
-
-func main() {
-	pos, neg := adder(), adder()
-	for i := 0; i < 10; i++ {
-		fmt.Println(
-			pos(i),
-			neg(-2*i),
-		)
-	}
-}
+func()
+func(x int) int
+func(a, _ int, z float32) bool
+func(a, b int, z float32) (bool)
+func(prefix string, values ...int)
+func(a, b int, z float64, opt ...interface{}) (success bool)
+func(int, int, float64) (float64, *[]int)
+func(n int) func(p *T)
 ```
 
-例如，函数 `adder` 返回一个闭包。每个闭包都被绑定到其各自的 `sum` 变量上。
