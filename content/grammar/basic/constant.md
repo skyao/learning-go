@@ -1,7 +1,7 @@
 ---
 date: 2018-12-04T23:50:00+08:00
 title: 常量
-weight: 433
+weight: 432
 menu:
   main:
     parent: "grammar-basic"
