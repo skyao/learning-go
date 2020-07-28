@@ -8,9 +8,7 @@ menu:
 description : "go语言类型中的数组类型"
 ---
 
-## 数组
-
-> 摘录自 go语言实战
+## go语言实战
 
 类型 `[n]T` 是一个数组，有 `n` 个类型为 `T` 的值。
 
@@ -40,7 +38,7 @@ fmt.Println(a[0], a[1])
 fmt.Println(a)
 ```
 
-## Array types
+## golang语言规范
 
 https://golang.org/ref/spec#Array_types
 
@@ -62,7 +60,7 @@ ElementType = Type .
 [2][2][2]float64  // same as [2]([2]([2]float64))
 ```
 
-## Arrays
+## Effective Go
 
 https://golang.org/doc/effective_go.html#arrays
 
@@ -90,9 +88,49 @@ x := Sum(&array)  // Note the explicit address-of operator
 
 但即使这种风格也不是 go 的习惯用法。请用分片（slice）代替。
 
+## 实现原理
 
+> 参考文章： [go语言数组的实现原理](https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-array/) 
+
+#### 初始化
+
+Go 语言中的数组有两种不同的创建方式，一种是显式的指定数组的大小，另一种是使用 `[...]T` 声明数组，Go 语言会在编译期间通过源代码对数组的大小进行推断：
+
+```go
+arr1 := [3]int{1, 2, 3}
+arr2 := [...]int{1, 2, 3}
+```
+
+编译器会对第二种数组的大小进行推导，通过遍历元素的方式来计算数组中元素的数量。
+
+这两种初始化方式在运行时是完全等价的，`[...]T` 这种初始化方式只是 Go 语言提供的一种语法糖，当不想计算数组中的元素个数时可以减少一些工作。
+
+对于一个由字面量组成的数组，根据数组元素数量的不同，编译器会做两种不同的优化：
+
+1. 当元素数量小于或者等于 4 个时，会直接将数组中的元素放置在栈上；
+2. 当元素数量大于 4 个时，会将数组中的元素放置到静态区并在运行时取出；
+
+#### 访问和赋值
+
+无论是在栈上还是静态存储区，数组在内存中其实就是一连串的内存空间。
+
+表示数组的方法就是：
+
+1. 一个指向数组开头的指针
+2. 数组中元素的数量
+3. 数组中元素类型占的空间大小
+
+数组访问越界是非常严重的错误，Go 语言中对越界的判断：
+
+1. 可以在编译期间由静态类型检查完成的，函数会对访问数组的索引进行验证。数组和字符串的一些简单越界错误都会在编译期间发现，比如我们直接使用整数或者常量访问数组。
+2. 使用变量去访问数组或者字符串时，需要Go 语言运行时在发现数组、切片和字符串的越界操作触发程序的运行时错误
+
+访问数组：
+
+- 在使用字面量整数访问数组下标时就会生成非常简单的中间代码
+- 当编译器无法对数组下标是否越界无法做出判断时才会加入 `PanicBounds` 指令交给运行时进行判断
 
 ### 参考资料
 
-- https://gobyexample-cn.github.io/arrays
+-  [go语言数组的实现原理](https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-array/) 
 

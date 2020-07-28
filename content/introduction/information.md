@@ -55,10 +55,11 @@ description : "收集Go语言的各种资料"
 
 网上教程：
 
-| 教程           | 地址                                                    | 备注                                     |
-| -------------- | ------------------------------------------------------- | ---------------------------------------- |
-| Go 系列教程    | [在线浏览](https://studygolang.com/subject/2)           | Golang tutorial series，强烈推荐新手使用 |
-| Go语言学习之路 | [在线浏览](https://www.liwenzhou.com/posts/Go/go_menu/) | Golang教程，有很多b站视频                |
+| 教程                                                         | 说明                                     |
+| ------------------------------------------------------------ | ---------------------------------------- |
+| [Go 系列教程](https://studygolang.com/subject/2)             | Golang tutorial series，强烈推荐新手使用 |
+| [Go语言学习之路](https://www.liwenzhou.com/posts/Go/go_menu/) | Golang教程，有很多b站视频                |
+| [Go 语言设计与实现](https://draveness.me/golang/)            | 很有深度，主讲实现原理，强烈推荐         |
 
 ### 工具
 

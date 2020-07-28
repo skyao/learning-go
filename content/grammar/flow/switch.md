@@ -1,11 +1,11 @@
 ---
 date: 2020-07-04T23:50:00+08:00
-title: which语句
+title: swich语句
 weight: 602
 menu:
   main:
     parent: "grammar-flow"
-description : "go语言类型中的 which 语句"
+description : "go语言类型中的 switch 语句"
 ---
 
 
