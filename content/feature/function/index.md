@@ -75,7 +75,13 @@ func ReadFull(r Reader, buf []byte) (n int, err error) {
 
 详见 defer 语句。
 
+### 函数的本质
 
+>  摘录自 [函数——go世界中的一等公民](https://segmentfault.com/a/1190000023340324) "函数的本质" 一节
+
+在go的世界中，函数是一等公民，可以给变量赋值，可以作为参数传递，也可以直接赋值。
+
+函数在go语言里的本质其实就是指向 `__TEXT` 段内存地址的一个指。
 
 ### 参考资料
 
