@@ -60,6 +60,7 @@ description : "收集Go语言的各种资料"
 | [Go 系列教程](https://studygolang.com/subject/2)             | Golang tutorial series，强烈推荐新手使用 |
 | [Go语言学习之路](https://www.liwenzhou.com/posts/Go/go_menu/) | Golang教程，有很多b站视频                |
 | [Go 语言设计与实现](https://draveness.me/golang/)            | 很有深度，主讲实现原理，强烈推荐         |
+| [Go语言高级编程](https://chai2010.cn/advanced-go-programming-book/) | 有实体书，作者柴树杉/曹春晖              |
 
 ### 工具
 
