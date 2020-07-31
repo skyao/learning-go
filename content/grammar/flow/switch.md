@@ -9,7 +9,7 @@ description : "go语言类型中的 switch 语句"
 ---
 
 
-## switch语句
+## go语言实战
 
 switch的语法和for、if类似，同样的括号和花括号使用规则，同样的容许在switch前执行一个简单的语句，同样的变量访问范围限制：
 
@@ -58,7 +58,7 @@ switch {
 }
 ```
 
-## Switch statements
+## golang语言规范
 
 https://golang.org/ref/spec#Switch_statements
 
@@ -184,7 +184,7 @@ if v == nil {
 
 在类型转换中不允许使用 "fallthrough "语句。
 
-## Switch
+## Effective Go
 
 https://golang.org/doc/effective_go.html#switch
 
