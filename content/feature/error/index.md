@@ -5,7 +5,9 @@ weight: 900
 description : "介绍Golang的错误处理"
 ---
 
-## go语言实战
+## go by example
+
+https://gobyexample-cn.github.io/errors
 
 符合 Go 语言习惯的做法是使用一个独立、明确的返回值来传递错误信息。 
 
