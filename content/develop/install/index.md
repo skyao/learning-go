@@ -88,9 +88,29 @@ GOPATH="/home/sky/work/soft/go"
 set GOPATH=C:\Users\aoxia\go
 ```
 
-### Mac安装
+## Mac安装
 
-先在 go 的 [官方网站](https://golang.org/dl/) 下载需要的版本，如 go1.12.6.darwin-amd64.pkg，然后双击安装。
+先在 go 的 [官方网站](https://golang.org/dl/) 下载需要的版本，如 `go1.**.darwin-amd64.pkg`，然后双击安装。
 
-或者，用 brew 是最简单的：`brew upgrade golang` 安装， `brew upgrade golang` 升级版本。
+更新版本时，同样下载，安装时会提示存在旧版本，然后自动卸载旧版本后安装新版本。
+
+安装路径为 `/usr/local/go/`, 因此也需要修改 profile 文件增加go到path路径：
+
+```bash
+# golang
+export PATH=/usr/local/go/bin:$PATH
+```
+
+
+
+或者，用 brew 是最简单的：`brew upgrade golang` 安装， `brew upgrade golang` 升级版本。但实操中发现brew下载golang的速度非常的慢，远不如手工下载安装快。
+
+## 安装后的配置
+
+加速 gomodule：
+
+```bash
+export GOPROXY=https://goproxy.cn,direct
+export GOSUMDB=sum.golang.google.cn
+```
 
