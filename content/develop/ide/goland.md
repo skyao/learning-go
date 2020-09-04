@@ -4,7 +4,7 @@ title: Goland
 weight: 331
 menu:
   main:
-    parent: "develop-idea"
+    parent: "develop-ide"
 description : "用于golang开发的goland"
 ---
 
