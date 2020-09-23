@@ -322,11 +322,33 @@ googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
 	weight = 2000
 
 [[menu.main]]
+	name   = "go-testing"
+	identifier = "test-gotesting"
+	parent = "test"
+	url    = "/test/gotesting/"
+	weight = 2010
+
+[[menu.main]]
 	name   = "单元测试"
 	identifier = "test-unit"
 	parent = "test"
 	url    = "/test/unit/"
-	weight = 2010
+	weight = 2030
+
+[[menu.main]]
+	name   = "集成测试"
+	identifier = "test-integration"
+	parent = "test"
+	url    = "/test/integration/"
+	weight = 2050
+
+[[menu.main]]
+	name   = "性能测试"
+	identifier = "test-performance"
+	parent = "test"
+	url    = "/test/performance/"
+	weight = 2070
+
 
 [[menu.main]]
 	name   = "工具"
