@@ -9,12 +9,12 @@ description : "介绍Go语言的安装"
 
 ## Linux安装
 
-先在 go 的 [官方网站](https://golang.org/dl/) 下载需要的版本， 以 Go 1.8.3 为例， 选择 `go1.8.3.linux-amd64.tar.gz` 。
+先在 go 的 [官方网站](https://golang.org/dl/) 下载需要的版本， 以 go1.15.6 为例， 选择 `go1.15.6.linux-amd64.tar.gz` 。
 
 然后参照 [安装指南](https://golang.org/doc/install)，简单解压缩到 `/usr/local` 即可：
 
 ```bash
-sudo tar -C /usr/local -xzf go1.8.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz
 ```
 
 完成之后go就安装在 `/usr/local/go` 下，这也是 Go 默认的安装路径。
@@ -33,7 +33,7 @@ export PATH=/usr/local/go/bin:$PATH
 ```bash
 $ source /etc/profile
 $ go version
-go version go1.8.3 linux/amd64
+go version go1.15.6 linux/amd64
 ```
 
 执行 `go env`，查看当前 go 的环境变量：
@@ -58,7 +58,7 @@ GOTOOLDIR="/usr/local/go/pkg/tool/linux_amd64"
 因此最好能自己设置 GOPATH，比如设置到自己的工作区目录，然后将 `GOPATH/bin` 加入到 PATH 中。继续修改 `/etc/profile`：
 
 ```bash
-export GOPATH=/home/sky/work/soft/go
+export GOPATH=/home/sky/work/soft/gopath
 export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 ```
 
@@ -67,7 +67,7 @@ export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 ```bash
 $ go env
 ......
-GOPATH="/home/sky/work/soft/go"
+GOPATH="/home/sky/work/soft/gopath"
 ......
 ```
 
